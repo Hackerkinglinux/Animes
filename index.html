@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime World</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu archivo de estilos CSS -->
+    <style>
+        /* Estilos adicionales para el buscador (puedes colocar estos estilos en tu archivo styles.css si prefieres) */
+        .buscador {
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .buscador .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .buscador input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .buscador button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .buscador button:hover {
+            background-color: #0056b3;
+        }
+
+        .buscador #results {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Anime World</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Series</a></li>
+                    <li><a href="#">Películas</a></li>
+                    <li><a href="#">Más Vistos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner">
+            <div class="container">
+                <h2>Bienvenido a Anime World</h2>
+                <p>Disfruta de los mejores animes y películas de anime en alta calidad.</p>
+                <a href="#" class="btn">Explorar</a>
+            </div>
+        </section>
+
+        <section class="animes-finalizados">
+            <div class="container">
+                <h2>Animes Finalizados</h2>
+                <div class="grid-container">
+                    <div class="anime-card">
+                        <img src="one_piece.jpg" alt="One Piece">
+                        <h3>One Piece</h3>
+                        <p>La legendaria aventura de Monkey D. Luffy y su tripulación.</p>
+                        <a href="#">Ver más</a>
+                    </div>
+                    <!-- Agregar más anime-cards según sea necesario -->
+                </div>
+            </div>
+        </section>
+
+        <section class="animes-en-emision">
+            <div class="container">
+                <h2>Animes en Emisión</h2>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="kaiju_8.jpg" alt="Kaiju 8">
+                            <h3>Kaiju 8</h3>
+                            <p>La lucha de un hombre contra monstruos gigantes.</p>
+                            <a href="#">Ver más</a>
+                        </div>
+                        <!-- Agregar más elementos de carrusel según sea necesario -->
+                    </div>
+                    <button class="carousel-prev">◀</button>
+                    <button class="carousel-next">▶</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aquí se agrega la sección del buscador -->
+        <section class="buscador">
+            <div class="container">
+                <input type="text" id="searchInput" placeholder="Buscar anime...">
+                <button onclick="search()">Buscar</button>
+            </div>
+            <div class="container" id="results">
+                <!-- Aquí se mostrarán los resultados de la búsqueda -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Anime World. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">WhatsApp</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script> <!-- Enlaza tu archivo de scripts JavaScript -->
+    <script>
+        // JavaScript adicional para la funcionalidad del buscador (igual al código que te proporcioné antes)
+        function search() {
+            var input = document.getElementById("searchInput").value.toLowerCase();
+            var resultsContainer = document.getElementById("results");
+            var resultsHTML = "";
+
+            // Ejemplo de datos de animes (puedes ajustar según tus necesidades)
+            var animes = [
+                { title: "One Piece", description: "La legendaria aventura de Monkey D. Luffy y su tripulación." },
+                { title: "Kimi no Nawa", description: "Una historia de amor entre dos personas conectadas por el destino." },
+                { title: "Jujutsu Kaisen", description: "Estudiantes que luchan contra maldiciones en una academia de hechicería." },
+                { title: "Suzume", description: "Una chica con el poder de comunicarse con los pájaros." }
+                // Agrega más datos de animes según sea necesario
+            ];
+
+            // Filtrar resultados
+            var filteredAnimes = animes.filter(function(anime) {
+                return anime.title.toLowerCase().includes(input) || anime.description.toLowerCase().includes(input);
+            });
+
+            // Construir HTML de resultados
+            if (filteredAnimes.length > 0) {
+                filteredAnimes.forEach(function(anime) {
+                    resultsHTML += `<div class="result">
+                                        <h3>${anime.title}</h3>
+                                        <p>${anime.description}</p>
+                                    </div>`;
+                });
+            } else {
+                resultsHTML = "<p>No se encontraron resultados.</p>";
+            }
+
+            // Mostrar resultados en el contenedor
+            resultsContainer.innerHTML = resultsHTML;
+        }
+    </script>
+</body>
+</html>
