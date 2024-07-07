@@ -41,7 +41,7 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
     text-align: center;
-    margin: 0 10px;
+    margin: 0 20px;  /* Ajusta el margen horizontal */
     width: 150px;  /* Ajusta el ancho del contenedor */
     flex-shrink: 0;
 }
@@ -67,3 +67,4 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
