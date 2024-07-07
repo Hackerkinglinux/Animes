@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime World</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de que este enlace apunte a tu archivo CSS -->
+</head>
+<body>
+    <header>
+        <h1>Anime World</h1>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Series</a>
+            <a href="#">Películas</a>
+            <a href="#">Más Vistos</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Bienvenido a Anime World</h2>
+        <p>Disfruta de los mejores animes y películas de anime en alta calidad.</p>
+        <a href="#">Explorar</a>
+        <section>
+            <h2>Animes Finalizados</h2>
+            <!-- Contenido de Animes Finalizados -->
+        </section>
+        <section>
+            <h2>Animes en Emisión</h2>
+            <div class="carousel-container">
+                <button class="carousel-prev">&lt;</button>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="onepiece.jpg" alt="One Piece">
+                        <h3>One Piece</h3>
+                        <p>La legendaria aventura de Monkey D. Luffy y su tripulación.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="kaiju8.jpg" alt="Kaiju 8">
+                        <h3>Kaiju 8</h3>
+                        <p>La lucha de un hombre contra monstruos gigantes.</p>
+                    </div>
+                    <!-- Agrega más elementos del carrusel según sea necesario -->
+                </div>
+                <button class="carousel-next">&gt;</button>
+            </div>
+        </section>
+        <section class="buscador">
+            <div class="container">
+                <input type="text" id="searchInput" placeholder="Buscar anime...">
+                <button id="searchButton">Buscar</button>
+            </div>
+            <div id="results"></div>
+        </section>
+    </div>
+    <script src="scripts.js"></script> <!-- Asegúrate de que este enlace apunte a tu archivo JS -->
+</body>
+</html>

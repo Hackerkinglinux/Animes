@@ -1,0 +1,134 @@
+/* Estilos para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilos para los enlaces de navegación */
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el título principal */
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el buscador */
+.buscador {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.buscador .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buscador input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.buscador button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.buscador button:hover {
+    background-color: #0056b3;
+}
+
+.buscador #results {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* Estilos para el carrusel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 300px; /* Ajusta el ancho de cada elemento del carrusel según sea necesario */
+    margin-right: 20px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
