@@ -1,0 +1,50 @@
+/* styles.css */
+
+/* Estilos del carrusel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 300px; /* Ancho de cada elemento del carrusel */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
