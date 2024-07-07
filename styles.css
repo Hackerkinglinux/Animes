@@ -42,7 +42,7 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 10px;
-    width: 150px; /* Ancho del contenedor */
+    width: 100px; /* Ancho del contenedor */
 }
 
 .anime-item img {
