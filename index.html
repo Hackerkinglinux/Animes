@@ -3,55 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime World</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de que este enlace apunte a tu archivo CSS -->
+    <title>Anime Sama</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
-        <h1>Anime World</h1>
+        <h1>Anime Sama</h1>
         <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Series</a>
-            <a href="#">Películas</a>
-            <a href="#">Más Vistos</a>
+            <a href="index.html">Inicio</a>
         </nav>
     </header>
-    <div class="container">
-        <h2>Bienvenido a Anime World</h2>
-        <p>Disfruta de los mejores animes y películas de anime en alta calidad.</p>
-        <a href="#">Explorar</a>
-        <section>
-            <h2>Animes Finalizados</h2>
-            <!-- Contenido de Animes Finalizados -->
-        </section>
-        <section>
-            <h2>Animes en Emisión</h2>
-            <div class="carousel-container">
-                <button class="carousel-prev">&lt;</button>
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <img src="onepiece.jpg" alt="One Piece">
-                        <h3>One Piece</h3>
-                        <p>La legendaria aventura de Monkey D. Luffy y su tripulación.</p>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="kaiju8.jpg" alt="Kaiju 8">
-                        <h3>Kaiju 8</h3>
-                        <p>La lucha de un hombre contra monstruos gigantes.</p>
-                    </div>
-                    <!-- Agrega más elementos del carrusel según sea necesario -->
-                </div>
-                <button class="carousel-next">&gt;</button>
-            </div>
-        </section>
-        <section class="buscador">
-            <div class="container">
-                <input type="text" id="searchInput" placeholder="Buscar anime...">
-                <button id="searchButton">Buscar</button>
-            </div>
-            <div id="results"></div>
-        </section>
-    </div>
-    <script src="scripts.js"></script> <!-- Asegúrate de que este enlace apunte a tu archivo JS -->
+    <main>
+        <h2>Bienvenido a Anime Sama</h2>
+        <button id="updateAnimeBtn">Actualizar Animes</button>
+        <div id="animeList"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Anime Sama. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts/web-ia.js"></script>
 </body>
 </html>
